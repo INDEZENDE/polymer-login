@@ -1,0 +1,7 @@
+{
+  "name": "component-login",
+  "short_name": "component-login",
+  "description": "Aplicación de login",
+  "start_url": "/",
+  "display": "standalone"
+}

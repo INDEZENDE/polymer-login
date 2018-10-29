@@ -1,0 +1,53 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+
+
+
+<dom-module id="component-login-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+        text-align: center;
+      }
+
+      paper-card{
+        width: 400px;
+      }
+    </style>
+    <!-- <h2>Hello [[prop1]]!</h2> -->
+    <paper-card heading="Crear cuenta" elevation="1">
+      <form action="">
+        <div class="card-content">
+          <paper-input label="1"></paper-input>
+          <paper-input label="2"></paper-input>
+        </div>
+        <div class="card-actions"></div>
+      </form>
+
+    </paper-card>
+
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class ComponentLoginApp extends Polymer.Element {
+      static get is() { return 'component-login-app'; }
+      static get properties() {
+        return {
+          // prop1: {
+          //   type: String,
+          //   value: 'component-login-app'
+          // }
+        };
+      }
+    }
+
+    window.customElements.define(ComponentLoginApp.is, ComponentLoginApp);
+  </script>
+</dom-module>
