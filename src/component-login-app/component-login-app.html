@@ -16,10 +16,22 @@
       paper-card{
         text-align: left;
         width: 400px;
+        padding: 0em 1em 1em 1em;
       }
+
+      paper-card .card-actions {
+        padding-top: 1em;
+        text-align: right;
+      }
+
+      paper-button {
+        background-color: var(--primary-color);
+        color: aliceblue;
+      }
+
     </style>
     <!-- <h2>Hello [[prop1]]!</h2> -->
-    <paper-card heading="Crear cuenta" elevation="1">
+    <paper-card heading="Crear cuenta" elevation="5">
       <form action="">
         <div class="card-content">
           <paper-input label="e-mail"></paper-input>
