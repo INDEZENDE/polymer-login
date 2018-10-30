@@ -2,7 +2,10 @@
 <link rel="import" href="../../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../../bower_components/paper-card/paper-card.html">
 <link rel="import" href="../../bower_components/paper-input/paper-input.html">
-
+<!-- Para cada ícono deben de estar instaladas las dos -->
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<!-- Fuente de icon https://www.webcomponents.org/element/@polymer/iron-icons/demo/demo/index.html -->
 
 
 <dom-module id="component-login-app">
@@ -13,7 +16,7 @@
         text-align: center;
       }
 
-      paper-card{
+      paper-card {
         text-align: left;
         width: 400px;
         padding: 0em 1em 1em 1em;
@@ -24,14 +27,36 @@
         text-align: right;
       }
 
-      paper-button {
-        background-color: var(--primary-color);
-        color: aliceblue;
+      paper-card .card-header iron-icon {
+        height: 2em;
+        width: 2em;
+        color:var(--paper-blue-300);
       }
 
+      paper-card .card-header {
+        font-size: 2em;
+        color:var(--paper-grey-500);
+      }
+
+      paper-button[raised] {
+        background-color: var(--primary-color);
+        color: aliceblue;
+
+      }
+
+      paper-button {
+        /* background-color: var(--primary-color); */
+        color: var(--paper-red-300);
+
+      }
     </style>
     <!-- <h2>Hello [[prop1]]!</h2> -->
-    <paper-card heading="Crear cuenta" elevation="5">
+    <paper-card elevation="5">
+      <div class="card-header">
+        <iron-icon icon="account-circle">si</iron-icon>
+        Crear cuenta
+
+      </div>
       <form action="">
         <div class="card-content">
           <paper-input label="e-mail"></paper-input>
@@ -53,7 +78,9 @@
      * @polymer
      */
     class ComponentLoginApp extends Polymer.Element {
-      static get is() { return 'component-login-app'; }
+      static get is() {
+        return 'component-login-app';
+      }
       static get properties() {
         return {
           // prop1: {
