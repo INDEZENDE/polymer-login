@@ -14,6 +14,7 @@
       }
 
       paper-card{
+        text-align: left;
         width: 400px;
       }
     </style>
@@ -21,10 +22,13 @@
     <paper-card heading="Crear cuenta" elevation="1">
       <form action="">
         <div class="card-content">
-          <paper-input label="1"></paper-input>
-          <paper-input label="2"></paper-input>
+          <paper-input label="e-mail"></paper-input>
+          <paper-input label="Contraseña"></paper-input>
         </div>
-        <div class="card-actions"></div>
+        <div class="card-actions">
+          <paper-button raised>Enviar</paper-button>
+          <paper-button>Cancelar</paper-button>
+        </div>
       </form>
 
     </paper-card>
